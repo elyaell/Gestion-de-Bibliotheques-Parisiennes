@@ -1,0 +1,40 @@
+*** README ***
+
+Projet de Gestion de Bibliothèques Parisiennes(R) version 1.0 25/04/2016
+
+* Base du projet *
+
+1. Se connecter à sa base de données personnelle (psql) avec son mot de passe
+2. Créer la base de données '\i src/create_base.sql'
+3. Créer les triggers '\i src/create_triggers.sql'
+4. Remplir la base de données avec les données prédéfinies '\i src/fill_tables'
+
+* Les scénarios *
+
+1. Gérer une inscription : '\i tests/test_inscription.sql'
+2. Gérer une ré-inscription : '\i tests/test_reinscription.sql'
+3. Emprunter un document : '\i tests/test_emprunt.sql'
+4. Réserver un document : '\i tests/test_reservation.sql'
+5. Rendre un document : '\i tests/test_retour.sql'
+6. Rechercher un document : '\i tests/test_recherche.sql'
+7. Atteindre la limite d'emprunt des DVD : '\i tests/test_limite_emprunt_dvd.sql'
+8. Atteindre la limite d'emprunt des documents dans une bibliotheque : '\i tests/test_limite_emprunts_bibliotheque.sql'
+9. Atteindre la limite d'emprunt des documents en général : '\i tests/test_limite_emprunts.sql'
+10. Atteindre la limite de réservation des documents : '\i tests/test_limite_reservation.sql'
+11. Payer une amende : '\i' tests/test_payer_amende.sql'
+
+* Divers *
+
+1. Afficher le contenu d'une bibliothèque : '\i others/bibliotheque_contenu.sql'
+2. Afficher les 10 dernières actions d'un membre : '\i others/usager_archive.sql'
+3. Avancer la date de un jour : '\i others/avancer_date_jour.sql'
+4. Avancer la date de une semaine : '\i others/avancer_date_semaine.sql'
+5. Avancer la date de un mois : '\i others/avancer_date_mois.sql'
+6. Effacer les deux mois les plus vieux des emprunts (les archives resteront inchangées) : '\i others/clean_base.sql'
+
+* Les statistiques *
+
+1. Pourcentage de documents en cours d'emprunts : '\i stats/statistiques_emprunts.sql'
+2. Pourcentage de types d'inscription : '\i stats/statistiques_inscriptions.sql'
+3. Pourcentage d'emprunts sur le dernier mois : '\i stats/statistiques_mois_emprunts.sql'
+4. Pourcentage d'inscriptions sur le dernier mois : '\i stats/statistiques_mois_inscriptions.sql'
